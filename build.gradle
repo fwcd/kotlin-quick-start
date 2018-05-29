@@ -1,0 +1,54 @@
+buildscript {
+	ext.kotlin_version = '1.2.41'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+
+apply plugin: "kotlin"
+apply plugin: "application"
+
+group = 'org.javacs'
+version = '0.1.1'
+
+mainClassName = "AppKt"
+description = "My Application"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.jetbrains.kotlin:kotlin-stdlib"
+	testCompile "junit:junit:4.12"
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': mainClassName
+	}
+
+	// Include dependencies in JAR
+	from (configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
+		exclude 'META-INF/MANIFEST.MF'
+		exclude 'META-INF/*.SF'
+		exclude 'META-INF/*.DSA'
+		exclude 'META-INF/*.RSA'
+	}
+}
+
+task printDependencies {
+	doLast {
+		configurations.runtime.resolve().each {
+			println it.getAbsolutePath()
+		}
+	}
+}

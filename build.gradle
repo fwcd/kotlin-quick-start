@@ -27,8 +27,8 @@ repositories {
 }
 
 dependencies {
-	compile "org.jetbrains.kotlin:kotlin-stdlib"
-	testCompile "junit:junit:4.12"
+	implementation "org.jetbrains.kotlin:kotlin-stdlib"
+	testImplementation "junit:junit:4.12"
 }
 
 jar {
@@ -42,13 +42,5 @@ jar {
 		exclude 'META-INF/*.SF'
 		exclude 'META-INF/*.DSA'
 		exclude 'META-INF/*.RSA'
-	}
-}
-
-task printDependencies {
-	doLast {
-		configurations.runtime.resolve().each {
-			println it.getAbsolutePath()
-		}
 	}
 }

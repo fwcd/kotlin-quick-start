@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "kotlin",
+			"request": "launch",
+			"name": "Launch Kotlin JVM App",
+			"jarDirectory": "${workspaceFolder}/build/install/Kotlin-Gradle-QuickStart/lib",
+			"mainClass": "AppKt",
+			"srcRoot": "${workspaceFolder}/src/main/kotlin"
+		},
+		{
+			"type": "java",
+			"name": "Debug (Attach)",
+			"request": "attach",
+			"hostName": "localhost",
+			"port": 0
+		}
+	]
+}

@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-	mainClassName = "AppKt"
+	mainClassName = "MainKt"
 }
 
 dependencies {

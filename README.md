@@ -1,4 +1,4 @@
-# Kotlin-Gradle-QuickStart
+# KotlinQuickStart
 An empty Kotlin project using Gradle.
 
 ## Building

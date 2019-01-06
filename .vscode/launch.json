@@ -1,0 +1,13 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "kotlin",
+			"request": "launch",
+			"name": "Kotlin Launch",
+			"projectRoot": "${workspaceFolder}",
+			"mainClass": "MainKt",
+			"preLaunchTask": "Gradle Build"
+		}
+	]
+}

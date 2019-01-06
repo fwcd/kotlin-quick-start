@@ -6,3 +6,4 @@ target/
 .project
 .classpath
 .idea
+ktDebugJsonLog.txt

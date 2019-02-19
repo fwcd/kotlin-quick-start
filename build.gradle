@@ -8,13 +8,13 @@ buildscript {
 	}
 }
 
-apply plugin: "kotlin"
-apply plugin: "application"
+apply plugin: 'kotlin'
+apply plugin: 'application'
 
 version = '0.1.1'
 
-mainClassName = "MainKt"
-description = "My Application"
+mainClassName = 'MainKt'
+description = 'My Application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -24,20 +24,6 @@ repositories {
 }
 
 dependencies {
-	implementation "org.jetbrains.kotlin:kotlin-stdlib"
-	testImplementation "junit:junit:4.12"
-}
-
-jar {
-	manifest {
-		attributes 'Main-Class': mainClassName
-	}
-
-	// Include dependencies in JAR
-	from (configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
-		exclude 'META-INF/MANIFEST.MF'
-		exclude 'META-INF/*.SF'
-		exclude 'META-INF/*.DSA'
-		exclude 'META-INF/*.RSA'
-	}
+	implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+	testImplementation 'junit:junit:4.12'
 }

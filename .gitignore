@@ -1,8 +1,10 @@
-.gradle/
-bin/
-build/
-target/
+.vscode
+.gradle
+bin
+build
+target
 .settings
 .project
 .classpath
 .idea
+ktDebugJsonLog.txt
